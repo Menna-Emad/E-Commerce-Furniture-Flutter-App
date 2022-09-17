@@ -159,33 +159,36 @@ class CardCounter extends StatefulWidget{
 
 class _CardCounterState extends State<CardCounter> {
   int numOfItems = 1;
-
   @override
   Widget build(BuildContext context) {
-    return Row(
-      children: [
-        buildOutlineButton(icon: Icons.remove, press: () {
-          if (numOfItems > 1) {
+    return BlocBuilder<CartBloc,CartState>(
+      builder: (context,state){
+        return Row(
+        children: [
+          buildOutlineButton(icon: Icons.remove, press: () {
+            if (numOfItems > 1) {
+              setState(() {
+                numOfItems--;
+              });
+            }
+
+          }),
+          Padding(
+              padding: const EdgeInsets.symmetric(horizontal: 20),
+              child: Text(
+                numOfItems.toString().padLeft(2, '0')
+                , style: Theme
+                  .of(context)
+                  .textTheme
+                  .headline6,)
+          ),
+          buildOutlineButton(icon: Icons.add, press: () {
             setState(() {
-              numOfItems--;
+              numOfItems++;
             });
-          }
-        }),
-        Padding(
-            padding: const EdgeInsets.symmetric(horizontal: 20),
-            child: Text(
-              numOfItems.toString().padLeft(2, '0')
-              , style: Theme
-                .of(context)
-                .textTheme
-                .headline6,)
-        ),
-        buildOutlineButton(icon: Icons.add, press: () {
-          setState(() {
-            numOfItems++;
-          });
-        }),
-      ],
+          }),
+        ],
+        );}
     );
   }
 

@@ -42,8 +42,9 @@ class CartScreen extends StatelessWidget{
                SizedBox(
                    height: 400,
                    child:ListView.builder(
-                     itemCount: state.cart.products.length,
-                     itemBuilder: (context,index){
+                     itemCount: state.cart.productQuantity(state.cart.products)
+                     .keys.length,
+                     itemBuilder: (context, int index){
                        return CartProductCard(
                          product: state.cart.products[index],);
                      },)),

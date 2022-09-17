@@ -1,3 +1,4 @@
+
 import 'package:ecommerceapp/Shopping_cart/cartmodel.dart';
 import 'package:ecommerceapp/Shopping_cart/cartscreen.dart';
 import 'package:ecommerceapp/homepage.dart';
@@ -31,7 +32,7 @@ class _BottomNavBarState extends State<BottomNavBar> {
             unselectedIconTheme:
             IconThemeData(color: MythemeData.unselectedColor),
             selectedLabelStyle: TextStyle(color: MythemeData.selectedColor),
-            items: [
+           items: [
               BottomNavigationBarItem(icon: Icon(Icons.home,size: 30,), label: '',),
               BottomNavigationBarItem(
                   icon: Icon(Icons.shopping_cart,size: 30,), label: ''),

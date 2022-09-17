@@ -29,6 +29,7 @@ class CartProductCard extends StatelessWidget{
                builder: (context,state){
                 return Row(
                   children: [
+                    CardCounter(),
                     IconButton(onPressed: (){
                       context
                       .read<CartBloc>()
