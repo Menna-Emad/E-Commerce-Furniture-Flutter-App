@@ -42,9 +42,6 @@ class _HomePageState extends State<HomePage> {
                         icon: Icon(
                           Icons.notifications, color: Colors.orange[200],
                           size: 30,)),
-                    IconButton(onPressed: (){
-                      Navigator.push(context, MaterialPageRoute(builder: (context)=>WishList()));
-                    }, icon: Icon(Icons.favorite)),
                   ],),),
               SizedBox(height: 10,),
               Padding(

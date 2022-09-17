@@ -1,6 +1,7 @@
 
 import 'package:ecommerceapp/ProductCard/CardProducts.dart';
 import 'package:ecommerceapp/ProductCard/ProductCard.dart';
+import 'package:ecommerceapp/Shopping_cart/cartscreen.dart';
 import 'package:ecommerceapp/category/category_models.dart';
 import 'package:ecommerceapp/wishinglist/wishlist.dart';
 import 'package:flutter/material.dart';
@@ -18,18 +19,19 @@ class CatalogScreen extends StatelessWidget{
      body: Column(
        children: [
      Padding(
-     padding: const EdgeInsets.only(top: 40, left: 20,right: 5),
+     padding: const EdgeInsets.only(top: 40),
      child: Row(mainAxisAlignment: MainAxisAlignment.spaceBetween,
        children: [
          Text('Furniture app', style: GoogleFonts.pacifico(
              color: Colors.black, fontSize: 25),),
-         const SizedBox(width: 90,),
+         const SizedBox(width: 50,),
          IconButton(onPressed: () {},
              icon: Icon(
                Icons.notifications, color: Colors.orange[200],
                size: 30,)),
          IconButton(onPressed: (){Navigator.push(context, MaterialPageRoute(builder: (context)=>WishList()));
          }, icon: const Icon(Icons.favorite)),
+         IconButton(onPressed: (){Navigator.push(context, MaterialPageRoute(builder: (context)=>CartScreen()));}, icon: Icon(Icons.shopping_cart))
 
        ],),),
     const SizedBox(height: 10,),

@@ -37,7 +37,7 @@ class _BottomNavBarState extends State<BottomNavBar> {
               BottomNavigationBarItem(
                   icon: Icon(Icons.shopping_cart,size: 30,), label: ''),
               BottomNavigationBarItem(
-                  icon: Icon(Icons.person,size: 30,), label: ''),
+                  icon: Icon(Icons.favorite,size: 30,), label: ''),
             ],
 
 
@@ -51,8 +51,10 @@ class _BottomNavBarState extends State<BottomNavBar> {
   Widget getCurrentPage() {
     if (currentPage == 0) {
       return HomePage();
-    } else
+    } else if(currentPage==1){
       return CartScreen();
+    }else
+      return WishList();
   }
 }
 class MythemeData{

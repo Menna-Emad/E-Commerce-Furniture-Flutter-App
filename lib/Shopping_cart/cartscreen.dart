@@ -1,8 +1,6 @@
 
-import 'package:ecommerceapp/ProductCard/CardProducts.dart';
 import 'package:ecommerceapp/Shopping_cart/cartProductCard.dart';
 import 'package:ecommerceapp/Shopping_cart/cartbloc.dart';
-import 'package:ecommerceapp/Shopping_cart/cartmodel.dart';
 import 'package:ecommerceapp/Shopping_cart/cartstate.dart';
 import 'package:ecommerceapp/wishinglist/wishlist.dart';
 import 'package:flutter/material.dart';
@@ -17,9 +15,6 @@ class CartScreen extends StatelessWidget{
      backgroundColor: Colors.grey[200],
      appBar: AppBar(title:Text( 'Cart',style: GoogleFonts.pacifico(color: Colors.orangeAccent,fontSize: 40),),backgroundColor: Colors.grey[200],elevation: 0,centerTitle: true,
     actions: [
-      IconButton(onPressed:(){
-        Navigator.push(context, MaterialPageRoute(builder: (context)=>WishList()));
-      }, icon:Icon(Icons.favorite,color: Colors.black,)),
       IconButton(onPressed:(){}, icon:Icon(Icons.notifications,color: Colors.black,))
     ], ),
      body: BlocBuilder<CartBloc,CartState>(

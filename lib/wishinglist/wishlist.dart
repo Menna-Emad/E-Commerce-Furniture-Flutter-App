@@ -19,9 +19,6 @@ class WishList extends StatelessWidget{
         leading:
       IconButton(icon:Icon( Icons.arrow_back),color: Colors.orangeAccent,onPressed: (){Navigator.pop(context);},),
       actions: [
-        IconButton(onPressed:(){
-          Navigator.push(context, MaterialPageRoute(builder: (context)=>CartScreen()));
-        }, icon:Icon(Icons.shopping_cart,color: Colors.black,)),
         IconButton(onPressed:(){}, icon:Icon(Icons.notifications,color: Colors.black,))
       ],),
 

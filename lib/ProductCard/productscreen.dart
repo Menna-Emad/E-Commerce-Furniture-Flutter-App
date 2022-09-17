@@ -23,7 +23,8 @@ appBar: AppBar(backgroundColor: product.color,elevation: 0,title:Text (product.n
     leading:IconButton(icon: Icon(Icons.arrow_back), onPressed: () =>Navigator.pop(context),),
     actions:<Widget>[
     IconButton(icon: Icon(Icons.search), onPressed: () { },),
-   IconButton(onPressed: (){Navigator.push(context, MaterialPageRoute(builder: (context)=>WishList()));}, icon: Icon(Icons.favorite)) ]
+   IconButton(onPressed: (){Navigator.push(context, MaterialPageRoute(builder: (context)=>WishList()));}, icon: Icon(Icons.favorite)),
+      IconButton(onPressed: (){Navigator.push(context, MaterialPageRoute(builder: (context)=>CartScreen()));}, icon: Icon(Icons.shopping_cart)) ]
 ),
 body: SingleChildScrollView(
   child: Column(
